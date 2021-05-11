@@ -81,8 +81,9 @@
                     
                 });
                 if(isAvailableGlobal) {
+                    playSound();
                     if(!hasOpenWindow) {
-                        hasOpenWindow = false;
+                        hasOpenWindow = true;
                         window.open("https://selfregistration.cowin.gov.in/","_blank");
                     }
                 } else {
@@ -137,6 +138,7 @@
                     }
                 });
                 if(isAvailableGlobal) {
+                    playSound();
                     if(!hasOpenWindow) {
                         hasOpenWindow = true;
                         window.open("https://selfregistration.cowin.gov.in/","_blank");
@@ -194,9 +196,9 @@ var startWatch = function() {
 var startWatchByPin = function() {
     setInterval(function() { checkCenterByPin() } ,5000);
 }
-var playSound() {
+function playSound() {
    var x = document.getElementById("myAudio");
-  x.play();
+   x.play();
 }
 $(document).ready(function(){
 
